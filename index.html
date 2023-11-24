@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Survey Form</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="title">Hostel Complaint Form</h1>
+            <p id="description">Thank you for your time to improve our hostel</p>
+            <form id="survey-form">
+                <div class="form-div">
+                    <label for="name" id="name-label">Name<input type="text" id="name" name="name" required placeholder="Enter your name"></label>
+                </div>
+                <div class="form-div">
+                    <label for="email" id="email-label">Email<input type="email" id="email"name="email" required placeholder="Enter your email-id"></label>
+                </div>
+                <div class="form-div">
+                    <label for="number" id="number-label">Age (optional)<input type="number" id="number" name="age" min="10" max="100" placeholder="Age"></label>
+                </div>
+                <div class="form-div">
+                    <label for="dropdown-label">Select your current role? <select name="current-role" id="dropdown">
+                        <option value="0">select current role</option>
+                        <option value="1">Student</option>
+                        <option value="2">Teacher</option>
+                        <option value="3">Hostel Staff</option>
+                        <option value="4">Parents</option>
+                        <option value="5">Other</option>
+                    </select></label>
+                </div>
+                <div class="form-div">
+                    <fieldset>
+                    <legend>Select One Hostel</legend>
+                        <label for="radio-btn-1"><input type="radio" id="radio-btn-1" name="radiobtn" value="1" checked> Hostel A</label>
+                        <label for="radio-btn-2"><input type="radio" id="radio-btn-2" name="radiobtn" value="2"> Hostel B</label>
+                        <label for="radio-btn-3"><input type="radio" id="radio-btn-3" name="radiobtn" value="3"> Hostel C</label>
+                        <label for="radio-btn-4"><input type="radio" id="radio-btn-4" name="radiobtn" value="4"> Hostel D</label>
+                    </fieldset>
+                </div>
+                <div class="form-div">
+                    <fieldset>
+                        <legend>Select the category</legend>
+                        <label><input type="checkbox" name="category" value="1"> Water</label>
+                        <label><input type="checkbox" name="category" value="2"> Lights</label>
+                        <label><input type="checkbox" name="category" value="3"> Bathrooms and toilets</label>
+                        <label><input type="checkbox" name="category" value="4"> Cleaning</label>
+                        <label><input type="checkbox" name="category" value="5"> Room Issue</label>
+                    </fieldset>
+                </div>
+                <div class="form-div">
+                    <fieldset>
+                    <legend>Tell us about your complaint</legend>
+                    <textarea name="feedbacks" id="textarea" cols="30" rows="5" placeholder="write complaints.."></textarea>
+                    </fieldset>
+                </div>
+                <div class="form-div">
+                    <button id="submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
