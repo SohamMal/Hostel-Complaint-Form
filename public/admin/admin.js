@@ -2,12 +2,12 @@ const $ = (s) => document.querySelector(s);
 const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
 
 const TABS = {
-  events:  { label: '🎉 Events',   title: 'title',   sub: 'date',  fields: [['title', 'Event name', 'text', 1], ['date', 'Date', 'date', 1], ['description', 'Details', 'textarea'], ['image', 'Photo', 'file']] },
-  gallery: { label: '📸 Gallery',  title: 'caption', sub: null,    fields: [['image', 'Photo', 'file', 1], ['caption', 'Caption', 'text']] },
-  notices: { label: '📢 News ticker', title: 'text', sub: null,    fields: [['text', 'Message (scrolls across the top)', 'text', 1]] },
-  staff:   { label: '👩‍🏫 Teachers', title: 'name',    sub: 'role',  fields: [['name', 'Name', 'text', 1], ['role', 'Role (e.g. Class 3 Teacher)', 'text'], ['bio', 'About them', 'textarea'], ['image', 'Photo', 'file']] },
-  settings:{ label: '🏫 School info' },
-  password:{ label: '🔑 Password' },
+  events:  { label: 'Events',   title: 'title',   sub: 'date',  fields: [['title', 'Event name', 'text', 1], ['date', 'Date', 'date', 1], ['description', 'Details', 'textarea'], ['image', 'Photo', 'file']] },
+  gallery: { label: 'Gallery',  title: 'caption', sub: null,    fields: [['image', 'Photo', 'file', 1], ['caption', 'Caption', 'text']] },
+  notices: { label: 'News ticker', title: 'text', sub: null,    fields: [['text', 'Message (scrolls across the top)', 'text', 1]] },
+  staff:   { label: 'Teachers', title: 'name',    sub: 'role',  fields: [['name', 'Name', 'text', 1], ['role', 'Role (e.g. Class 3 Teacher)', 'text'], ['bio', 'About them', 'textarea'], ['image', 'Photo', 'file']] },
+  settings:{ label: 'School info' },
+  password:{ label: 'Password' },
 };
 
 async function api(url, opts = {}) {

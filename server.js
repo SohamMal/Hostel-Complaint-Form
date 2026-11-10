@@ -14,14 +14,14 @@ fs.mkdirSync(UPLOAD_DIR, { recursive: true });
 const DB_FILE = path.join(DATA_DIR, 'db.json');
 const DEFAULT_DB = {
   settings: {
-    name: 'Sunshine Primary School',
-    tagline: 'Where little minds grow big dreams',
-    about: 'We are a happy school where children learn through play, curiosity and kindness. Our teachers help every child shine.',
+    name: 'Your Primary School',
+    tagline: 'Nurturing knowledge, character and curiosity',
+    about: 'We provide a caring and structured learning environment in which every child is encouraged to achieve their full potential. Our dedicated teachers support academic growth alongside good character and respect for others.',
     address: '12 School Road, Your Town',
     phone: '+00 000 000 0000',
     email: 'hello@example.com',
   },
-  notices: [{ id: 'n1', text: 'Welcome to our new school website! 🎉' }],
+  notices: [{ id: 'n1', text: 'Welcome to our new school website.' }],
   events: [],
   gallery: [],
   staff: [],

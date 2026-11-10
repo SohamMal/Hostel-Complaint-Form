@@ -8,9 +8,9 @@ async function load() {
   for (const id of ['navName', 'heroName', 'footName']) $('#' + id).textContent = s.name;
   $('#heroTag').textContent = s.tagline;
   $('#aboutText').textContent = s.about;
-  $('#cAddr').textContent = '📍 ' + s.address;
-  $('#cPhone').textContent = '📞 ' + s.phone;
-  $('#cMail').textContent = '✉️ ' + s.email;
+  $('#cAddr').textContent = 'Address: ' + s.address;
+  $('#cPhone').textContent = 'Phone: ' + s.phone;
+  $('#cMail').textContent = 'Email: ' + s.email;
   $('#year').textContent = new Date().getFullYear();
 
   if (notices.length) { $('#ticker').hidden = false; $('#tickerText').textContent = notices.map((n) => n.text).join('     •     '); }
@@ -18,7 +18,7 @@ async function load() {
   const today = new Date().toISOString().slice(0, 10);
   const eg = $('#eventsGrid');
   const ordered = [...events.filter((e) => e.date >= today), ...events.filter((e) => e.date < today).reverse()];
-  if (!ordered.length) eg.append(el('p', 'empty', 'No events yet – check back soon!'));
+  if (!ordered.length) eg.append(el('p', 'empty', 'No events have been published yet.'));
   for (const e of ordered) {
     const c = el('div', 'card');
     if (e.image) { const i = el('img'); i.src = e.image; i.alt = e.title; i.loading = 'lazy'; c.append(i); }
@@ -28,7 +28,7 @@ async function load() {
   }
 
   const gg = $('#galleryGrid');
-  if (!gallery.length) gg.append(el('p', 'empty', 'Photos coming soon!'));
+  if (!gallery.length) gg.append(el('p', 'empty', 'Photographs will be added soon.'));
   for (const g of [...gallery].reverse()) {
     const f = el('figure'); const i = el('img'); i.src = g.image; i.alt = g.caption || 'School photo'; i.loading = 'lazy';
     f.append(i); if (g.caption) f.append(el('figcaption', '', g.caption));
@@ -36,10 +36,10 @@ async function load() {
   }
 
   const sg = $('#staffGrid');
-  if (!staff.length) sg.append(el('p', 'empty', 'Meet our teachers soon!'));
+  if (!staff.length) sg.append(el('p', 'empty', 'Staff details will be published soon.'));
   for (const t of staff) {
     const c = el('div', 'card');
-    if (t.image) { const i = el('img', 'avatar'); i.src = t.image; i.alt = t.name; c.append(i); } else c.append(el('div', 'avatar', '🧑‍🏫'));
+    if (t.image) { const i = el('img', 'avatar'); i.src = t.image; i.alt = t.name; c.append(i); } else c.append(el('div', 'avatar', (t.name||'T')[0].toUpperCase()));
     const b = el('div', 'body'); b.append(el('h3', '', t.name), el('div', 'role', t.role || ''), el('p', 'muted', t.bio || ''));
     c.append(b); sg.append(c);
   }
@@ -52,7 +52,7 @@ box.onclick = () => (box.hidden = true);
 document.addEventListener('keydown', (e) => e.key === 'Escape' && (box.hidden = true));
 
 /* memory game */
-const EMOJI = ['🐶', '🐱', '🐸', '🦁', '🐼', '🐵', '🦊', '🐰'];
+const EMOJI = ['A','B','C','D','E','F','G','H'];
 function memory() {
   const grid = $('#memory'); grid.textContent = ''; $('#moves').textContent = 0;
   const cards = [...EMOJI.slice(0, 8), ...EMOJI.slice(0, 8)].sort(() => Math.random() - 0.5);
@@ -66,7 +66,7 @@ function memory() {
       $('#moves').textContent = ++moves;
       if (first.textContent === em) {
         first.classList.add('done'); t.classList.add('done'); first = null;
-        if (++found === 8) setTimeout(() => alert('🎉 You did it in ' + moves + ' moves!'), 300);
+        if (++found === 8) setTimeout(() => alert('Well done. Completed in ' + moves + ' moves.'), 300);
       } else {
         lock = true; const a = first; first = null;
         setTimeout(() => { for (const x of [a, t]) { x.textContent = '?'; x.classList.remove('open'); } lock = false; }, 700);
@@ -92,7 +92,7 @@ function quiz() {
   (function show() {
     root.textContent = '';
     if (i >= qs.length) {
-      root.append(el('p', 'q', `You scored ${score} / ${qs.length} ${score >= 4 ? '🌟' : '👍'}`));
+      root.append(el('p', 'q', `You scored ${score} / ${qs.length} `));
       const b = el('button', 'btn small', 'Play again'); b.onclick = () => { i = 0; score = 0; quiz(); }; root.append(b); return;
     }
     const [q, opts, ans] = qs[i];
