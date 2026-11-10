@@ -1,58 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="mr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Our School</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>नूतन मराठी विद्यालय (प्राथमिक), सोलापूर</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<header class="nav">
-  <a class="brand" href="#top"><span class="logo">S</span><span id="navName">Our School</span></a>
-  <nav>
-    <a href="#events">Events</a><a href="#gallery">Gallery</a><a href="#teachers">Teachers</a><a href="#activities">Activities</a><a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<div class="ticker" id="ticker" hidden><span class="ticker-label">Announcements</span><div class="ticker-track"><div id="tickerText"></div></div></div>
-
-<section class="hero" id="top">
-  <h1 id="heroName">Our School</h1>
-  <p id="heroTag"></p>
-  <div class="btns"><a class="btn" href="#events">Upcoming events</a><a class="btn ghost" href="#about">About the school</a></div>
-</section>
-
-<section id="about" class="wrap about"><h2>About the School</h2><p id="aboutText"></p></section>
-
-<section id="events" class="wrap"><h2>Events &amp; Notices</h2><div id="eventsGrid" class="grid"></div></section>
-<section id="gallery" class="wrap"><h2>Photo Gallery</h2><div id="galleryGrid" class="gallery"></div></section>
-<section id="teachers" class="wrap"><h2>Our Teachers</h2><div id="staffGrid" class="grid staff"></div></section>
-
-<section id="activities" class="activities"><div class="wrap">
-  <h2>Student Activities</h2>
-  <div class="games">
-    <div class="card game">
-      <h3>Memory Match</h3>
-      <p class="muted">Match all the pairs. Moves: <b id="moves">0</b></p>
-      <div id="memory" class="memory"></div>
-      <button class="btn small" id="memReset">New game</button>
-    </div>
-    <div class="card game">
-      <h3>Quick Quiz</h3>
-      <div id="quiz"></div>
-    </div>
-  </div>
-</div></section>
-
-<footer id="contact">
-  <h2>Contact</h2>
-  <p id="cAddr"></p><p id="cPhone"></p><p id="cMail"></p>
-  <p class="small">© <span id="year"></span> <span id="footName"></span> · <a href="/admin/">Staff login</a></p>
-</footer>
-
-<div id="lightbox" class="lightbox" hidden><button aria-label="Close">✕</button><img alt=""><p></p></div>
+<div id="app"></div>
+<script src="/ph.js"></script>
 <script src="/app.js"></script>
 </body>
 </html>

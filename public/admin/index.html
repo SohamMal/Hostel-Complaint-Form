@@ -5,32 +5,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>School Admin</title>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Serif+Devanagari:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="/styles.css">
 <link rel="stylesheet" href="/admin/admin.css">
 </head>
 <body>
 <div id="login" class="login" hidden>
-  <form class="card pad" id="loginForm">
+  <form class="panel pad" id="loginForm">
     <h2>Staff Login</h2>
-    <label>Password<input type="password" id="pw" required autofocus autocomplete="current-password"></label>
+    <p class="muted">कर्मचारी लॉगिन</p>
+    <label>Password / पासवर्ड<input type="password" id="pw" required autofocus autocomplete="current-password"></label>
     <p class="err" id="loginErr"></p>
-    <button class="btn">Log in</button>
-    <p class="small"><a href="/">← Back to website</a></p>
+    <button class="btn green">Log in</button>
+    <p><a href="/">← Back to website</a></p>
   </form>
 </div>
-
 <div id="panel" hidden>
-  <header class="nav">
-    <span class="brand"><span class="logo">S</span>School Admin</span>
-    <nav><a href="/" target="_blank">View website ↗</a><a href="#" id="logout">Log out</a></nav>
-  </header>
-  <main class="adm">
+  <header class="mast"><div class="in">
+    <span class="brand"><div><strong>School Admin</strong><span>व्यवस्थापन</span></div></span>
+    <a class="lang" href="/" target="_blank">View website ↗</a>
+    <button class="lang" id="logout" type="button">Log out</button>
+  </div></header>
+  <main class="adm in">
     <div class="tabs" id="tabs"></div>
     <div id="msg" class="msg" hidden></div>
     <section id="view"></section>
   </main>
 </div>
+<script src="/ph.js"></script>
 <script src="/admin/admin.js"></script>
 </body>
 </html>
