@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>School Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+<div id="login" class="login" hidden>
+  <form class="card pad" id="loginForm">
+    <h2>🔐 Teacher login</h2>
+    <label>Password<input type="password" id="pw" required autofocus autocomplete="current-password"></label>
+    <p class="err" id="loginErr"></p>
+    <button class="btn">Log in</button>
+    <p class="small"><a href="/">← Back to website</a></p>
+  </form>
+</div>
+
+<div id="panel" hidden>
+  <header class="nav">
+    <span class="brand"><span class="logo">🛠️</span>School Admin</span>
+    <nav><a href="/" target="_blank">View website ↗</a><a href="#" id="logout">Log out</a></nav>
+  </header>
+  <main class="adm">
+    <div class="tabs" id="tabs"></div>
+    <div id="msg" class="msg" hidden></div>
+    <section id="view"></section>
+  </main>
+</div>
+<script src="/admin/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "school-website",
+  "version": "1.0.0",
+  "description": "A friendly display website for a primary school, with an admin panel",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "express": "^4.19.2", "multer": "^1.4.5-lts.1" }
+}

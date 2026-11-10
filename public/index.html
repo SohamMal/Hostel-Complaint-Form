@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#top"><span class="logo">🏫</span><span id="navName">Our School</span></a>
+  <nav>
+    <a href="#events">Events</a><a href="#gallery">Gallery</a><a href="#teachers">Teachers</a><a href="#fun">Fun Corner</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="ticker" id="ticker" hidden><span class="ticker-label">📢 News</span><div class="ticker-track"><div id="tickerText"></div></div></div>
+
+<section class="hero" id="top">
+  <span class="float f1">⭐</span><span class="float f2">🎈</span><span class="float f3">✏️</span><span class="float f4">🌈</span><span class="float f5">📚</span>
+  <h1 id="heroName">Our School</h1>
+  <p id="heroTag"></p>
+  <a class="btn" href="#fun">Play a game 🎮</a>
+  <a class="btn ghost" href="#events">See what's on 🎉</a>
+</section>
+
+<section id="about" class="wrap about"><h2>About us</h2><p id="aboutText"></p></section>
+
+<section id="events" class="wrap"><h2>Events 🎉</h2><div id="eventsGrid" class="grid"></div></section>
+<section id="gallery" class="wrap"><h2>Gallery 📸</h2><div id="galleryGrid" class="gallery"></div></section>
+<section id="teachers" class="wrap"><h2>Our teachers 👩‍🏫</h2><div id="staffGrid" class="grid staff"></div></section>
+
+<section id="fun" class="wrap">
+  <h2>Fun Corner 🎮</h2>
+  <div class="games">
+    <div class="card game">
+      <h3>Memory Match</h3>
+      <p class="muted">Find all the matching pairs! Moves: <b id="moves">0</b></p>
+      <div id="memory" class="memory"></div>
+      <button class="btn small" id="memReset">New game</button>
+    </div>
+    <div class="card game">
+      <h3>Quick Quiz</h3>
+      <div id="quiz"></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <h2>Come say hello 👋</h2>
+  <p id="cAddr"></p><p id="cPhone"></p><p id="cMail"></p>
+  <p class="small">© <span id="year"></span> <span id="footName"></span> · <a href="/admin/">Staff login</a></p>
+</footer>
+
+<div id="lightbox" class="lightbox" hidden><button aria-label="Close">✕</button><img alt=""><p></p></div>
+<script src="/app.js"></script>
+</body>
+</html>
